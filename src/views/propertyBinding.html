@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-sm-3">
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input class="form-control" type="text" id="name" name="name" data-bind="value: name, valueUpdate: 'afterkeydown'" />
+            </div>
+            <button type="button" class="btn btn-primary" data-bind="click: sayHello, enable: name">Try this</button>
+        </form>
+    </div>
+    <div class="col-sm-9">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Binding name on observable</h3>
+                    </div>
+                    <div class="panel-body" data-bind="text: name, visible: name"></div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Binding on click</h3>
+                    </div>
+                    <div class="panel-body" data-bind="text: greeting, visible: shouldShowGreeting()"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
