@@ -1,0 +1,46 @@
+{
+  "name": "durandaljs-101",
+  "version": "1.0.0",
+  "description": "Samples for Durandal.js",
+  "main": "main.js",
+  "scripts": {
+    "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "lite": "lite-server",
+    "typings": "typings",
+    "postinstall": "typings install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gdyrrahitis/Durandal.js-101.git"
+  },
+  "keywords": [
+    "gdyrrahitis",
+    "durandal.js"
+  ],
+  "author": "George Dyrrachitis",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/gdyrrahitis/Durandal.js-101/issues"
+  },
+  "homepage": "https://github.com/gdyrrahitis/Durandal.js-101#readme",
+  "dependencies": {
+    "@types/durandal": "^2.1.35",
+    "@types/jquery": "^2.0.40",
+    "@types/knockout": "^3.4.39",
+    "@types/requirejs": "^2.1.28",
+    "bootstrap": "^3.3.7",
+    "durandal": "^2.2.0",
+    "jquery": "^1.12.4",
+    "knockout": "^3.4.1",
+    "requirejs": "^2.3.2",
+    "requirejs-text": "^2.0.15"
+  },
+  "devDependencies": {
+    "concurrently": "^3.1.0",
+    "lite-server": "^2.2.2",
+    "typescript": "^2.1.4",
+    "typings": "^2.1.0"
+  }
+}
