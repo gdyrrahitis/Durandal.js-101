@@ -2,10 +2,11 @@
     <div class="col-sm-3">
         <form>
             <div class="form-group">
-                <label for="name">Name</label>
-                <input class="form-control" type="text" id="name" name="name" data-bind="value: name, valueUpdate: 'afterkeydown'" />
+                <label for="code">Country Alpha2Code</label>
+                <input class="form-control" type="text" id="code" name="code" data-bind="value: code, valueUpdate: 'afterkeydown'" maxlength="2"
+                />
             </div>
-            <button type="button" class="btn btn-primary" data-bind="click: sayHello, enable: name">Try this</button>
+            <button type="button" class="btn btn-primary" data-bind="click: showCountryFlag, enable: code">Use code</button>
         </form>
     </div>
     <div class="col-sm-9">
@@ -13,16 +14,35 @@
             <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Binding name on observable</h3>
+                        <h3 class="panel-title">Binding code on observable</h3>
                     </div>
-                    <div class="panel-body" data-bind="text: name, visible: name"></div>
+                    <div class="panel-body" data-bind="text: 'Country code is ' + code(), visible: code"></div>
                 </div>
 
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">Binding on click</h3>
                     </div>
-                    <div class="panel-body" data-bind="text: greeting, visible: shouldShowGreeting()"></div>
+                    <div class="panel-body" data-bind="visible: shouldShowFlag()">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Flag</th>
+                                    <th>Url</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <img data-bind="attr: { src: flagUrl, alt: code}" class="flag" />
+                                    </td>
+                                    <td>
+                                        <strong>Flag comes from: </strong><em data-bind="text: flagUrl"></em>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

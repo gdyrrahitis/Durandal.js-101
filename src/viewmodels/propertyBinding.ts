@@ -2,19 +2,22 @@ import * as app from "durandal/app";
 import * as ko from "knockout";
 
 class PropertyBinding {
+    private flagpediaUrlTemplate: string = "http://flagpedia.net/data/flags/normal/$P0.png";
     private hasClicked = ko.observable();
 
     public title = "Property binding";
-    public name = ko.observable();
-    public greeting = ko.observable(); 
+    public code = ko.observable();
+    public flagUrl = ko.observable(); 
 
-    public sayHello () {
+    public showCountryFlag () {
         this.hasClicked(true);
-        this.greeting(`Hello ${this.name()}! Nice to meet you!`);
+
+        let url = this.flagpediaUrlTemplate.replace("$P0", this.code().toString());
+        this.flagUrl(url);
     }
 
-    public shouldShowGreeting(): boolean {
-        let shouldShow = this.hasClicked() && (typeof this.name() !== "undefined");
+    public shouldShowFlag(): boolean {
+        let shouldShow = this.hasClicked() && (typeof this.code() !== "undefined");
         return shouldShow;
     }
 }
