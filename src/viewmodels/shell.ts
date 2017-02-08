@@ -7,7 +7,8 @@ class Shell {
     public activate () {
         this.router.map([
             { route: "", title: "Home", moduleId: "viewmodels/home", nav: true },
-            { route: "property/binding", title: "Property binding", moduleId: "viewmodels/propertyBinding", nav: true }
+            { route: "binding/property", title: "Property binding", moduleId: "viewmodels/propertyBinding", nav: true },
+            { route: "binding/collection", title: "Collection binding", moduleId: "viewmodels/collectionBinding", nav: true }
         ]).buildNavigationModel();
 
         return this.router.activate();
