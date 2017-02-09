@@ -9,7 +9,7 @@
                         <input class="form-control" type="text" id="code" name="code" data-bind="value: code, valueUpdate: 'afterkeydown'" maxlength="2"
                         />
                     </div>
-                    <button type="button" class="btn btn-primary" data-bind="click: showCountryFlag, enable: code">Use code</button>
+                    <button type="button" class="btn btn-primary" data-bind="click: showCountryFlag, enable: code && name">Use code</button>
                 </form>
             </div>
             <div class="col-sm-9">
@@ -19,7 +19,7 @@
                             <div class="panel-heading">
                                 <h3 class="panel-title">Binding code on observable</h3>
                             </div>
-                            <div class="panel-body" data-bind="text: 'For ' + name + ', the country code is ' + code(), visible: code && name.length > 2"></div>
+                            <div class="panel-body" data-bind="text: 'For ' + name + ', the country code is ' + code(), visible: code && name"></div>
                         </div>
 
                         <div class="panel panel-default">
