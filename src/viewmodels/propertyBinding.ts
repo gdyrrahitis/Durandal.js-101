@@ -16,6 +16,7 @@ class PropertyBinding {
             return "";
         }
 
+        console.log(code.length)
         let country = getName(<any>code, "en");
         return country;
     }

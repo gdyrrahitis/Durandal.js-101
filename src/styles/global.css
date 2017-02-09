@@ -5,4 +5,5 @@ body {
 .flag {
     height: 90px;
     width: 150px;
+    border: 1px solid #ccc;
 }

@@ -19,7 +19,7 @@
                             <div class="panel-heading">
                                 <h3 class="panel-title">Binding code on observable</h3>
                             </div>
-                            <div class="panel-body" data-bind="text: 'For ' + name + ', the country code is ' + code(), visible: code"></div>
+                            <div class="panel-body" data-bind="text: 'For ' + name + ', the country code is ' + code(), visible: code && name.length > 2"></div>
                         </div>
 
                         <div class="panel panel-default">
@@ -37,7 +37,7 @@
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <img data-bind="attr: { src: flagUrl, alt: code}" class="flag" />
+                                                <img data-bind="attr: { src: flagUrl, alt: code}" class="flag img-rounded" />
                                             </td>
                                             <td>
                                                 <strong>Flag comes from: </strong><em data-bind="text: flagUrl"></em>

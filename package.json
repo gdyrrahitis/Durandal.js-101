@@ -8,8 +8,7 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "lite": "lite-server",
-    "typings": "typings",
-    "postinstall": "typings install"
+    "typings": "typings"
   },
   "repository": {
     "type": "git",
@@ -44,6 +43,7 @@
   "devDependencies": {
     "concurrently": "^3.1.0",
     "lite-server": "^2.2.2",
+    "node-amd-require": "^0.2.2",
     "typescript": "^2.1.4",
     "typings": "^2.1.0"
   }
