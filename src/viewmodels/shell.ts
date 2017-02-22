@@ -4,11 +4,12 @@ import * as router from "plugins/router";
 
 class Shell {
     public router = router;
-    public activate () {
+    public activate() {
         this.router.map([
             { route: "", title: "Home", moduleId: "viewmodels/home", nav: true },
             { route: "binding/property", title: "Property binding", moduleId: "viewmodels/propertyBinding", nav: true },
-            { route: "binding/collection", title: "Collection binding", moduleId: "viewmodels/collectionBinding", nav: true }
+            { route: "binding/collection", title: "Collection binding", moduleId: "viewmodels/collectionBinding", nav: true },
+            { route: "routing/child-routes*splat", title: "Child routes", moduleId: "viewmodels/childRoutes", nav: true }
         ]).buildNavigationModel();
 
         return this.router.activate();

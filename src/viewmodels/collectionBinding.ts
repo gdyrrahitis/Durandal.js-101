@@ -2,25 +2,21 @@ import * as app from "durandal/app";
 import * as ko from "knockout";
 import { getName } from "i18n-iso-countries";
 
+import { Country } from "../models/Country";
+
 class CollectionBinding {
-    private flagpediaUrlTemplate: string = "http://flagpedia.net/data/flags/normal/$P0.png";
-    private _countries = [];
+    private _countries: Country[] = [];
     public title = "Collection binding";
     public countries = ko.observable();
 
     constructor() {
         this._countries = [
-            { name: getName("us", "en"), code: "us" },
-            { name: getName("gb", "en"), code: "gb" },
-            { name: getName("es", "en"), code: "es" },
-            { name: getName("fr", "en"), code: "fr" }
+            new Country(getName("us", "en"), "us"),
+            new Country(getName("gb", "en"), "gb"),
+            new Country(getName("es", "en"), "es"),
+            new Country(getName("fr", "en"), "fr")
         ];
         this.countries(this._countries);
-    }
-
-    public getFlag(code: string) {
-        let url = this.flagpediaUrlTemplate.replace("$P0", code.toString());
-        return url;
     }
 }
 

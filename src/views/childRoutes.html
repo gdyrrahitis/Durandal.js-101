@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-md-12">
+        <h4>Child routes</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <h5>Using child routes to navigate to nested views</h5>
+                <h6>Default route does not show in navigation model through...</h6>
+                <ul class="nav nav-pills" data-bind="foreach: router.navigationModel">
+                    <li role="presentation" data-bind="css: {active: isActive}">
+                        <a data-bind="attr: {href: hash }, css: {active: isActive}, text: title"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div data-bind="router: { transition: 'entrance'}">Nothing selected</div>
+            </div>
+        </div>
+    </div>
+</div>

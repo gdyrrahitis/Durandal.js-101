@@ -15,7 +15,7 @@
                     <tbody data-bind="foreach: countries">
                         <tr>
                             <td>
-                                <img data-bind="attr: { src: $root.getFlag(code), alt: code}" class="flag" />
+                                <img data-bind="attr: { src: getFlag(code), alt: code}" class="flag" />
                             </td>
                             <td data-bind="text: name"></td>
                             <td data-bind="text: code"></td>
